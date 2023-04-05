@@ -1,2 +1,2 @@
-# Sistema Empleados Php, Larabel, MariaDB, Bootstrap.
+# Sistema Empleados Php, Laravel, MariaDB, Bootstrap.
 
