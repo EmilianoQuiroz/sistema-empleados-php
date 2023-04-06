@@ -33,6 +33,12 @@ class EmpleadoController extends Controller
         // Recolecta toda la informacion del empleado
         //$datosEmpleado = request()->all();
         $datosEmpleado = request()->except('_token');
+
+            // Condicional para la carga de imagenes
+            if($request->hasFile('Foto')){
+                $datosEmpleado['Foto']=$request->file('Foto')->store('uploads','public');
+            }
+
         Empleado::insert($datosEmpleado);
         return response()->json($datosEmpleado);
     }
