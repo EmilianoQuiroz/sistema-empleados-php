@@ -102,8 +102,17 @@ class EmpleadoController extends Controller
      */
     public function destroy($id)
     {
-        //
-        Empleado::destroy($id);
+        // Borrar registros
+        
+        $empleado=Empleado::findOrFail($id);
+
+        // Si la imagen existe la eliminamos
+        if(Storage::delete('public/'.$empleado->Foto)){
+            
+            Empleado::destroy($id);
+        
+        }
+        
         return redirect('empleado');
     }
 }
