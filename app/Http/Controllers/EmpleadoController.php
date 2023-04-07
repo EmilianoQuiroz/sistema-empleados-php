@@ -70,9 +70,14 @@ class EmpleadoController extends Controller
 
     /**
      * Remove the specified resource from storage.
+     * 
+     * @param \App\Models\Empleado $empleado
+     * @return \Illuminate\Http\Response
      */
-    public function destroy(Empleado $empleado)
+    public function destroy($id)
     {
         //
+        Empleado::destroy($id);
+        return redirect('empleado');
     }
 }
