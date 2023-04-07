@@ -15,7 +15,7 @@ class EmpleadoController extends Controller
     public function index()
     {
         //Consulta de la info de la base de datos
-        $datos['empleados']=Empleado::paginate(5);
+        $datos['empleados']=Empleado::paginate(10);
         return view('empleado.index',$datos);
     }
 
@@ -128,7 +128,8 @@ class EmpleadoController extends Controller
         // Con esto regresamos al formulario luego del update
         $empleado=Empleado::findOrFail($id);
 
-        return view('empleado.edit', compact('empleado'));
+        //return view('empleado.edit', compact('empleado'));
+        return redirect('empleado')->with('mensaje','Empleado modificado');
     }
 
     /**

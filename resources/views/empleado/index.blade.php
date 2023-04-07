@@ -3,9 +3,23 @@
 @section('content')
 <div class="container">
 
+<!-- Alert de empleado modificado correctamente -->
 @if(Session::has('mensaje'))
-{{ Session::get('mensaje')}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <strong>
+    {{ Session::get('mensaje')}}
+  </strong>
+</div>
+<script>
+  var alertList = document.querySelectorAll('.alert');
+  alertList.forEach(function (alert) {
+    new bootstrap.Alert(alert)
+  })
+</script>
 @endif
+<!-- Fin del Alert -->
+
 <a href="{{ url('empleado/create') }}" class="btn btn-success"> Registrar nuevo empleado </a>
 <br>
 <br>
@@ -55,6 +69,9 @@
         </tbody>
 
 </table>
+
+<!-- Paginacion -->
+{!! $empleados->links() !!}
 
 </div>
 @endsection
