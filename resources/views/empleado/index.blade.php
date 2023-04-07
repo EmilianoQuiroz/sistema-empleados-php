@@ -22,7 +22,12 @@ Archivo para mostrar la lista de empleados
                 <td>{{ $empleado->ApellidoPaterno }}</td>
                 <td>{{ $empleado->ApellidoMaterno }}</td>
                 <td>{{ $empleado->Correo }}</td>
-                <td>Editar | 
+                <td>
+                
+                <a href="{{ url('/empleado/'.$empleado->id.'/edit') }}">
+                    Editar
+                </a>
+                | 
 
                     <form action="{{ url('/empleado/'.$empleado->id ) }}" method="post">
                         @csrf
@@ -35,7 +40,7 @@ Archivo para mostrar la lista de empleados
                 </td>
             </tr>
             @endforeach
-            
+
         </tbody>
 
 </table>

@@ -1,3 +1,3 @@
-/**
-* Formulario de edicion de empleado
-*/
+Formulario de edicion de empleado
+
+@include('empleado.form');
