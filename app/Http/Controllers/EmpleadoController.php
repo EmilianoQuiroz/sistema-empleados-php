@@ -12,8 +12,9 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        //
-        return view('empleado.index');
+        //Consulta de la info de la base de datos
+        $datos['empleados']=Empleado::paginate(5);
+        return view('empleado.index',$datos);
     }
 
     /**
