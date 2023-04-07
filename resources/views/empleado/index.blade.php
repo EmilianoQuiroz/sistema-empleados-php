@@ -1,6 +1,9 @@
 Archivo para mostrar la lista de empleados
 
-<a href="{{ url('empleado/create') }}"> Registrar neuvo empleado </a>
+@if(Session::has('mensaje'))
+{{ Session::get('mensaje')}}
+@endif
+<a href="{{ url('empleado/create') }}"> Registrar nuevo empleado </a>
 
 <table class="table table-light">
     <thead class="thead-light">
