@@ -5,6 +5,6 @@ Formulario de edicion de empleado
 @csrf
 {{ method_field('PATCH')}}
 
-@include('empleado.form');
+@include('empleado.form',['modo'=>'Editar']);
 
 </form>

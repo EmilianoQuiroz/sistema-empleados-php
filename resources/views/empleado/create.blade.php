@@ -1,10 +1,8 @@
-/**
-* Formulario de creacion de empleado
-*/
+Formulario de creacion de empleado
 
 <form action="{{ url('/empleado') }}" method="POST" enctype="multipart/form-data">
 @csrf
-@include('empleado.form');
+@include('empleado.form',['modo'=>'Crear']);
 
 
 </form>
