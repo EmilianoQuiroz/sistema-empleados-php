@@ -65,10 +65,20 @@ class EmpleadoController extends Controller
 
     /**
      * Update the specified resource in storage.
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Empleado $empleado
+     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Empleado $empleado)
+    public function update(Request $request, $id)
     {
-        //
+        // Recepcionamos todos los datos a excepcion del token y el metodo
+        $datosEmpleado = request()->except(['_token','_method']);
+        Empleado::where('id','=',$id)->update($datosEmpleado);
+
+        // Con esto regresamos al formulario luego del update
+        $empleado=Empleado::findOrFail($id);
+
+        return view('empleado.edit', compact('empleado'));
     }
 
     /**
