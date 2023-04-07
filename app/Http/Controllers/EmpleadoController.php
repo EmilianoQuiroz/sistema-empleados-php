@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Empleado;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Storage;
+
 class EmpleadoController extends Controller
 {
     /**
@@ -71,8 +73,19 @@ class EmpleadoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Recepcionamos todos los datos a excepcion del token y el metodo
+        // Recolectamos todos los datos a excepcion del token y el metodo
         $datosEmpleado = request()->except(['_token','_method']);
+
+        // Si existe una foto la adjuntamos y le pasamos el nombre del campo datosEmpleado
+        if($request->hasFile('Foto')){
+            // Recuperamos la informacion de empleado
+            $empleado=Empleado::findOrFail($id);
+            // A partir de la foto concatenamos y borramos 
+            Storage::delete('public/'.$empleado->Foto);
+            // Si el cambio anterior existio podremos actualizar esa informacion
+            $datosEmpleado['Foto']=$request->file('Foto')->store('uploads','public');
+        }
+        // Luego del condicional actualizamos la base de datos
         Empleado::where('id','=',$id)->update($datosEmpleado);
 
         // Con esto regresamos al formulario luego del update
