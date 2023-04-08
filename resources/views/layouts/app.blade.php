@@ -90,24 +90,24 @@
                 <div class="row text-center text-md-left">
                     <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Sistema de Empleados</h5>
-                        <p>Sistema de gestion de empleados CRUD con html, Bootstrap, Golang y My SQL, en el que se pueden agregar, editar y eliminar empleados de una base de datos mediante un backend con Golang. </p>
+                        <p>Sistema de gestion de empleados CRUD con Php, Laravel,Bootstrap y My SQL, en el que se pueden agregar, editar y eliminar empleados de una base de datos mediante un backend con Php y Laravel. </p>
                     </div>
 
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">Tecnologias</h5>
                         <p>
                             <a href="#" class="text-white" style="text-decoration: none;">
-                                HTML
+                                PHP
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-white" style="text-decoration: none;">
+                                Laravel
                             </a>
                         </p>
                         <p>
                             <a href="#" class="text-white" style="text-decoration: none;">
                                 Bootstrap
-                            </a>
-                        </p>
-                        <p>
-                            <a href="#" class="text-white" style="text-decoration: none;">
-                                Go
                             </a>
                         </p>
                         <p>
@@ -120,12 +120,12 @@
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                         <h5 class="text-uppercase mb-4 font-weight-bold text-secondary">Redes Sociales</h5>
                         <p>
-                            <a href="#" class="text-white" style="text-decoration: none;">
+                            <a href="#https://www.linkedin.com/in/santiago-quiroz-dev/" class="text-white" style="text-decoration: none;">
                                 LinkedIn
                             </a>
                         </p>
                         <p>
-                            <a href="#" class="text-white" style="text-decoration: none;">
+                            <a href="https://github.com/EmilianoQuiroz" class="text-white" style="text-decoration: none;">
                                 GitHub
                             </a>
                         </p>
