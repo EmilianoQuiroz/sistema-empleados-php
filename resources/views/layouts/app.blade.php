@@ -83,7 +83,7 @@
     </div>
 
 <!-- Se que esto es un asco pero no se me ocurrio otra cosa -->
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 <!-- Footer de la app-->
  <footer class="bg-dark text-light pt-5 pb-4">
             <div class="container text-center text-md-left" style="margin-bottom: 0;">
